@@ -1,0 +1,17 @@
+.food-image img{
+    width: 286px;
+    height: 289px;
+}
+.food-detail{
+border: 2px solid black;
+}
+.order-list{
+    width: 100%;
+    background-color: rgb(116, 121, 119);
+    border: none;
+
+}
+
+.order-list:hover{
+    background-color: rgba(105, 163, 154, 0.76);
+} 
