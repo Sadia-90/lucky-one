@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faBowlFood } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import './Products.css';
 
@@ -14,6 +16,7 @@ const Produtcs = (props) => {
             
             <button className='order-list'>
              <p>add order</p>
+             <FontAwesomeIcon icon={faBowlFood}></FontAwesomeIcon>
          </button>
 
         </div>

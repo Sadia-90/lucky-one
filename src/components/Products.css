@@ -9,6 +9,9 @@ border: 2px solid black;
     width: 100%;
     background-color: rgb(116, 121, 119);
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
