@@ -17,6 +17,16 @@ const Product = () => {
           }
           console.log(order);
 
+
+          const ChooseOne = () => {
+            const random = Math.floor(Math.random() * order.length)
+            const choosed = [order[random]]
+            setOrder(choosed)
+          };
+          const ChooseAgain = () => {
+            setOrder([])
+          };
+
     return (
           
 
@@ -38,14 +48,14 @@ const Product = () => {
                    order.map(order=> <p 
                     key={order.id}
                     order={order}
-                    >name:{order.name}</p>   )
+                    >name:{order.name}</p>)
                }
 
                
                
-               <button>Choose for me</button>
+               <button onClick={ChooseOne}>Choose for me</button>
                
-           <button>Choose again</button>
+           <button onClick={ChooseAgain}>Choose again</button>
             
            </div>
 
