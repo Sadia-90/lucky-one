@@ -3,20 +3,26 @@ import './Product.css'
 import Produtcs from './Produtcs';
 import productsData from './ProductData';
 
+
 const Product = () => {
     
-     const [order, setorder] = useState([])
-
-    const handelAddOrderClick = (product) =>{
-        // console.log(product)
-           const newOrder = [...order, product];
-           setorder(newOrder);
-         }
+     const [order, setOrder] = useState([])
+    //  console.log(order);
      
 
+     const handelAddOrderClick = (product) =>{
+         // console.log(product)
+            const newOrder = [...order, product];
+            setOrder(newOrder);
+          }
+          console.log(order);
+
     return (
+          
+
         <div className='food-container'>
-            <div className="food-menu">
+
+            <div className="food-menu"> 
             {
                  productsData.map(product=> <Produtcs 
                     key={product.id}
@@ -25,11 +31,18 @@ const Product = () => {
                     ></Produtcs>)
             }
             </div>
-       
+
             <div className="food-order">
                <h1>order list</h1>
-               <p>name:{order.length}</p>
+               {
+                   order.map(order=> <p 
+                    key={order.id}
+                    order={order}
+                    >name:{order.name}</p>   )
+               }
 
+               
+               
                <button>Choose for me</button>
                
            <button>Choose again</button>
